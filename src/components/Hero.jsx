@@ -57,7 +57,7 @@ const Hero = () => {
                 }}
             >
                 <video
-                    src="/public/Neon Sign.mkv"
+                    src="/Neon Sign.mkv"
                     autoPlay
                     muted
                     loop
