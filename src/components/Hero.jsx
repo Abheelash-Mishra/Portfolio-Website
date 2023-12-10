@@ -46,10 +46,10 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className="flex items-center justify-center min-h-screen relative overflow-hidden">
+        <div className="flex justify-center min-h-screen relative overflow-hidden">
             <div
                 ref={videoContainerRef}
-                className="absolute inset-0 z-0"
+                className="relative z-0"
                 style={{
                     pointerEvents: 'none',
                     width: '100%',
@@ -61,8 +61,9 @@ const Hero = () => {
                     autoPlay
                     muted
                     loop
-                    className="w-full h-full object-cover scale-103"
-                ></video>
+                    className="w-full h-full object-cover"
+                    style={{ top: 0, left: 0 }}
+                />
             </div>
         </div>
     );

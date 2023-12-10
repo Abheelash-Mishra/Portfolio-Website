@@ -2,21 +2,22 @@ import Hero from "./components/Hero.jsx";
 import { useScroll } from "framer-motion";
 import PortfolioIntro from "./components/PortfolioIntro.jsx";
 import Navbar from "./components/Navbar.jsx";
+import AboutMe from "./components/AboutMe.jsx";
 
 function App() {
-    const { scrollY } = useScroll();
     return (
-        <div className={"flex flex-col"}>
+        <div className={"flex flex-col items-center"}>
             <Navbar />
             <Hero/>
             <PortfolioIntro />
+            <AboutMe />
 
             <div>
                 <img src="/SectionChange.png" alt="///LOADING" />
             </div>
 
             <div className={"bg-cyberpunkYellow"}>
-                <h1>TEstt</h1>
+                <h1>Test</h1>
             </div>
         </div>
 
