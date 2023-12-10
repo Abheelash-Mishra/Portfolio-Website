@@ -1,5 +1,4 @@
 import Hero from "./components/Hero.jsx";
-import { useScroll } from "framer-motion";
 import PortfolioIntro from "./components/PortfolioIntro.jsx";
 import Navbar from "./components/Navbar.jsx";
 import AboutMe from "./components/AboutMe.jsx";
