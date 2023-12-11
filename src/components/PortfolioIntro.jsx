@@ -25,6 +25,7 @@ const PortfolioIntro = () => {
 			viewport={{once: true}}
 			className={ "flex flex-col text-cyberpunkYellow items-center text-8xl" }
 			variants={ introVariants }
+			id={"aboutMe"}
 		>
 			<h1> Welcome To My Portfolio </h1>
 		</motion.div>
