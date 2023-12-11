@@ -14,7 +14,7 @@ const Projects = () => {
 		{
 			"id": "01",
 			"name": "Project A",
-			"details": "Lorem Ipsum blah blah blah blah",
+			"details": "Duis vehicula arcu nec sem eleifend, quis scelerisque nibh aliquet. Donec egestas, sem sit amet faucibus auctor, ante velit bibendum justo, quis mollis purus arcu quis metus.",
 			"image": "/ProjectA_img.png",
 		},
 		{
@@ -63,18 +63,42 @@ const Projects = () => {
 				>
 					{ !isOpen[index] && (
 						<motion.div className={ "w-full flex flex-row justify-between" }>
-
 							<div className={ "w-1/4 flex flex-col pl-8 py-10" }>
-								<h3 className="text-8xl font-bold mb-2">{ project.id }</h3>
-								<p className="text-4xl mb-4">/// { project.name }</p>
+								<p className="text-8xl font-bold mb-2">{ project.id }</p>
+								<p className="text-4xl font-semibold mb-4">/// { project.name }</p>
 							</div>
 						</motion.div>
 					) }
 
 					{ isOpen[index] && (
-						<motion.div className="flex flex-row h-full text-xl text-gray-600 justify-between">
-							<div className={"w-1/3"}>
-								<p>{ project.details }</p>
+						<motion.div className="flex flex-row h-full text-xl text-gray-600">
+							<div className={"w-1/3 flex flex-col pl-10 py-10 text-black"}>
+								<p className={"text-6xl font-bold text-left"}>/// {project.name}</p>
+
+								<p className={"text-xl text-justify my-8 h-32"}>{project.details}</p>
+
+								<div className={"mt-12 overflow-hidden"}>
+									<motion.button
+										whileHover={ { scale: 1.1 } }
+										whileTap={ { scale: 0.9 } }
+										className={"border-2 border-black rounded-full px-8 py-4 hover:text-black font-semibold m-4"}
+									>
+										<a href="#">
+											Github Repo <i className="fa-solid fa-download" />
+										</a>
+									</motion.button>
+
+									<motion.button
+										whileHover={ { scale: 1.1 } }
+										whileTap={ { scale: 0.9 } }
+										className={"border-2 border-black rounded-full px-8 py-4 hover:text-black font-semibold"}
+									>
+										<a href="#">
+											Live Deploy <i className="fa-solid fa-download" />
+										</a>
+									</motion.button>
+								</div>
+
 							</div>
 							<div className="overflow-hidden w-2/3">
 								<img
