@@ -23,11 +23,11 @@ const PortfolioIntro = () => {
 			initial="offscreen"
 			whileInView="onscreen"
 			viewport={{once: true}}
-			className={ "flex flex-col text-cyberpunkYellow items-center text-8xl" }
+			className={ "w-full text-cyberpunkYellow text-8xl" }
 			variants={ introVariants }
 			id={"aboutMe"}
 		>
-			<h1> Welcome To My Portfolio </h1>
+			<h1 className={"mx-20"}> Welcome To My Portfolio </h1>
 		</motion.div>
 	);
 };
