@@ -15,7 +15,12 @@ body {
     background: rgba(0, 0, 0, 1);
 }
 
-.project-image{
+.project-image-odd {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 100%);
     mask-image: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.8) 100%);
+}
+
+.project-image-even {
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
+    mask-image: linear-gradient(-45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.8) 100%);
 }
