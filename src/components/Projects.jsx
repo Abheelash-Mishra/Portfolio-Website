@@ -10,6 +10,25 @@ const Projects = () => {
 		setIsOpen(newIsOpen);
 	};
 
+	const imageVariants = {
+		closed: {
+			x: -200,
+			opacity: 0,
+		},
+		open: {
+			x: 0,
+			opacity: 1,
+			transition: {
+				type: "spring",
+				bounce: 0.6,
+				duration: 2,
+				delay: 0.5
+			}
+		}
+	};
+
+	const expandedHeight = 500;
+
 	const projectArray = [
 		{
 			"id": "01",
@@ -49,8 +68,6 @@ const Projects = () => {
 		},
 	];
 
-	const expandedHeight = 500;
-
 	return (
 		<div className="flex flex-col items-center w-full bg-cyberpunkYellow py-20" id={ "yellow-bg" }>
 			{ projectArray.map((project, index) => (
@@ -71,44 +88,48 @@ const Projects = () => {
 					) }
 
 					{ isOpen[index] && (
-						<motion.div className="flex flex-row h-full text-xl text-gray-600">
-							<div className={"w-1/3 flex flex-col pl-10 py-10 text-black"}>
-								<p className={"text-6xl font-bold text-left"}>/// {project.name}</p>
+						<motion.div
+							className="flex flex-row h-full text-xl text-gray-600"
+						>
+							<div className="w-1/3 flex flex-col pl-10 py-10 text-black">
+								<p className="text-6xl font-bold text-left">/// { project.name }</p>
+								<p className="text-xl font-semibold text-justify my-8 h-32">{ project.details }</p>
 
-								<p className={"text-xl text-justify my-8 h-32"}>{project.details}</p>
-
-								<div className={"mt-12 overflow-hidden"}>
+								<div className="mt-12 overflow-hidden">
 									<motion.button
 										whileHover={ { scale: 1.1 } }
 										whileTap={ { scale: 0.9 } }
-										className={"border-2 border-black rounded-full px-8 py-4 hover:text-black font-semibold m-4"}
+										className="border-2 border-black rounded-full px-8 py-4 hover:text-cyberpunkYellow hover:bg-black font-semibold m-3"
 									>
 										<a href="#">
-											Github Repo <i className="fa-solid fa-download" />
+											Github Repo <i className="fa-solid fa-up-right-from-square"></i>
 										</a>
 									</motion.button>
 
 									<motion.button
 										whileHover={ { scale: 1.1 } }
 										whileTap={ { scale: 0.9 } }
-										className={"border-2 border-black rounded-full px-8 py-4 hover:text-black font-semibold"}
+										className="border-2 border-black rounded-full px-8 py-4 hover:text-cyberpunkYellow hover:bg-black font-semibold m-3"
 									>
-										<a href="#">
-											Live Deploy <i className="fa-solid fa-download" />
+										<a href="">
+											Live Deploy <i className="fa-solid fa-up-right-from-square"></i>
 										</a>
 									</motion.button>
 								</div>
-
 							</div>
 							<div className="overflow-hidden w-2/3">
-								<img
+								<motion.img
 									src={ project.image }
 									alt={ project.name }
+									initial = "closed"
+									animate = "open"
+									variants = { imageVariants }
 									className="project-image object-cover"
 								/>
 							</div>
 						</motion.div>
 					) }
+
 
 				</motion.button>
 			)) }
