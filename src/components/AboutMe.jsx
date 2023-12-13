@@ -1,6 +1,20 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const AboutMe = () => {
+	const [isPlaying, setIsPlaying] = useState(true);
+	const [scale, setScale] = useState(1);
+
+	const handleHover = () => {
+		setIsPlaying(false);
+		setScale(1.1);
+	};
+
+	const handleHoverOut = () => {
+		setIsPlaying(true);
+		setScale(1);
+	};
+
 	const aboutMeVariants = {
 		offscreen: {
 			x: 200,
@@ -24,9 +38,9 @@ const AboutMe = () => {
 			whileInView="onscreen"
 			viewport={ { once: true } }
 			variants={ aboutMeVariants }
-			className={ "w-full flex flex-row items-center my-20" }
+			className={ "w-full h-full flex flex-row my-20" }
 		>
-			<div className={"w-1/2 mx-20 my-10"}>
+			<div className={ "w-full mx-20 my-10" }>
 				<p className={ "flex flex-col items-center text-cyberpunkYellow text-xl text-justify" }>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet luctus nunc ac congue.
 					Cras
@@ -74,9 +88,19 @@ const AboutMe = () => {
 					</div>
 				</p>
 			</div>
-			<div>
-				TESTTTT
-			</div>
+			<motion.div
+				onMouseEnter={ handleHover }
+				onMouseLeave={ handleHoverOut }
+			>
+				<motion.video
+					src="/Desktop.mkv"
+					autoPlay={ isPlaying }
+					muted
+					loop
+					className={ "w-full object-cover" }
+					style = {{scale, transition: "transform 1s ease-in-out"}}
+				/>
+			</motion.div>
 		</motion.div>
 	);
 };
