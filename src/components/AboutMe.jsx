@@ -1,9 +1,22 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const AboutMe = () => {
 	const [isPlaying, setIsPlaying] = useState(true);
 	const [scale, setScale] = useState(1);
+
+	// Disabling right-click
+	const videoContainer = document.getElementById("video-container");
+	console.log(videoContainer);
+
+	useEffect(() => {
+		if (videoContainer) {
+			videoContainer.addEventListener("contextmenu", (event) => {
+				event.preventDefault();
+			});
+		}
+	}, [videoContainer]);
+
 
 	const handleHover = () => {
 		setIsPlaying(false);
@@ -98,7 +111,8 @@ const AboutMe = () => {
 					muted
 					loop
 					className={ "w-full object-cover" }
-					style = {{scale, transition: "transform 1s ease-in-out"}}
+					id={ "video-container" }
+					style={ { scale, transition: "transform 1s ease-in-out" } }
 				/>
 			</motion.div>
 		</motion.div>
