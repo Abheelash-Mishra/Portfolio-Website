@@ -9,6 +9,7 @@ export default {
     extend: {
       colors: {
         cyberpunkYellow: "#FCEE0A",
+        aqua: "#00FFFF",
       },
       scale: {
         '103': '1.03',
