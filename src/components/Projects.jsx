@@ -84,11 +84,12 @@ const Projects = () => {
 	];
 
 	return (
-		<div className="flex flex-col items-center w-full bg-cyberpunkYellow py-20" id={ "yellow-bg" }>
+		<div className="flex flex-col items-center w-full bg-cyberpunkYellow py-20 pb-64" id={ "yellow-bg" }>
+			<div className={"w-5/6 border-4 border-t-2 border-b-2 border-black"}>
 			{ projectArray.map((project, index) => (
 				<motion.button
 					key={ project.id }
-					className="flex flex-col w-5/6  border-2 border-t-2 border-black bg-cyberpunkYellow"
+					className="flex flex-col w-full border-t-2 border-b-2 border-black bg-cyberpunkYellow"
 					onClick={ () => toggleDetails(index) }
 					animate={ { height: isOpen[index] ? expandedHeight : 250 } }
 					transition={ { duration: 0.5, ease: "easeInOut" } }
@@ -199,6 +200,7 @@ const Projects = () => {
 
 				</motion.button>
 			)) }
+			</div>
 		</div>
 	);
 };
