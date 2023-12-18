@@ -3,6 +3,7 @@ import PortfolioIntro from "./components/PortfolioIntro.jsx";
 import Navbar from "./components/Navbar.jsx";
 import AboutMe from "./components/AboutMe.jsx";
 import Projects from "./components/Projects.jsx";
+import Experience from "./components/Experience.jsx";
 
 function App() {
 	return (
@@ -17,9 +18,7 @@ function App() {
 			</div>
 
 			<Projects/>
-			<div className={ "w-full h-80 bg-cyberpunkYellow" } id={ "yellow-bg" }>
-				Test
-			</div>
+			<Experience />
 		</div>
 
 	)
