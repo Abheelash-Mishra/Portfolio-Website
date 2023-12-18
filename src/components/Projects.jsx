@@ -84,7 +84,7 @@ const Projects = () => {
 	];
 
 	return (
-		<div className="flex flex-col items-center w-full bg-cyberpunkYellow py-20 pb-64" id={ "yellow-bg" }>
+		<div className="flex flex-col items-center w-full bg-cyberpunkYellow py-20 pb-[400px]" id={ "yellow-bg" }>
 			<div className={"w-5/6 border-4 border-t-2 border-b-2 border-black"}>
 			{ projectArray.map((project, index) => (
 				<motion.button
@@ -104,7 +104,7 @@ const Projects = () => {
 												key={ index }
 												whileHover={ { scale: 1.1 } }
 												whileTap={ { scale: 0.9 } }
-												className="inline-block border-2 border-black rounded-full px-6 py-2 hover:text-cyberpunkYellow hover:bg-black font-semibold m-1"
+												className="inline-block border-2 border-black rounded-full px-6 py-2 hover:text-cyberpunkYellow hover:bg-black font-semibold m-1 cursor-default"
 											>
 												{ tech }
 											</motion.div>
@@ -125,7 +125,7 @@ const Projects = () => {
 												key={ index }
 												whileHover={ { scale: 1.1 } }
 												whileTap={ { scale: 0.9 } }
-												className="inline-block border-2 border-black rounded-full px-6 py-2 hover:text-cyberpunkYellow hover:bg-black font-semibold m-1"
+												className="inline-block border-2 border-black rounded-full px-6 py-2 hover:text-cyberpunkYellow hover:bg-black font-semibold m-1 cursor-default"
 											>
 												{ tech }
 											</motion.div>
