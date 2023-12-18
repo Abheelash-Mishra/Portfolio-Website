@@ -1,9 +1,32 @@
+import {motion} from "framer-motion";
+
 const Experience = () => {
+	const expVariants = {
+		offscreen: {
+			opacity: 0,
+		},
+		onscreen: {
+			opacity: 1,
+			transition: {
+				type: "spring",
+				bounce: 0.4,
+				duration: 3,
+				delay: 1
+			}
+		}
+	};
+
 	return (
 		<div className={ "black-dotted-bg w-full text-cyberpunkYellow" }>
 			<h1 className={ "text-xl text-aqua mt-32 mb-8 mx-8 border-b-2 border-aqua/20" }>/// EXPERIENCE.MODULE....</h1>
 
-			<div className={ "flex w-full flex-row justify-start mb-8" }>
+			<motion.div
+				initial="offscreen"
+				whileInView="onscreen"
+				viewport={{once: true}}
+				variants={ expVariants }
+				className={ "flex w-full flex-row justify-start mb-8" }
+			>
 				<div className={ "w-1/2 mx-16 text-xl border-2 border-aqua p-4 inline-block bg-black" }>
 					<div className={ "font-semibold pb-4 border-b-2 border-aqua flex justify-between" }>
 						<div>
@@ -18,9 +41,15 @@ const Experience = () => {
 						their monochrome image counterpart as inputs, and output an image that is well-lit.
 					</p>
 				</div>
-			</div>
+			</motion.div>
 
-			<div className={ "flex w-full flex-row justify-end my-16" }>
+			<motion.div
+				initial="offscreen"
+				whileInView="onscreen"
+				viewport={{once: true}}
+				variants={ expVariants }
+				className={ "flex w-full flex-row justify-end my-16" }
+			>
 				<div className={ "w-1/2 mx-16 text-xl border-2 border-aqua p-4 inline-block bg-black" }>
 					<div className={ "font-semibold pb-4 border-b-2 border-aqua flex justify-between" }>
 						<div>
@@ -35,7 +64,7 @@ const Experience = () => {
 						me eager to tackle new challenges.
 					</p>
 				</div>
-			</div>
+			</motion.div>
 
 		</div>
 	);
