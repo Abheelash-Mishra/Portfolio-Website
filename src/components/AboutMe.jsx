@@ -7,7 +7,6 @@ const AboutMe = () => {
 
 	// Disabling right-click
 	const videoContainer = document.getElementById("video-container");
-	console.log(videoContainer);
 
 	useEffect(() => {
 		if (videoContainer) {
