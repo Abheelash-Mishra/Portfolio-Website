@@ -22,9 +22,9 @@ const Navbar = () => {
 				</a>
 			</div>
 			<div className={"flex flex-row"}>
-				<a href={"#aboutMe"} className={ `text-${isYellowBg ? "black" : "cyberpunkYellow"} items-center text-2xl px-4 font-semibold` }>About Me</a>
-				<a className={ `text-${isYellowBg ? "black" : "cyberpunkYellow"} items-center text-2xl px-4 font-semibold` }>Navbar 2</a>
-				<a className={ `text-${isYellowBg ? "black" : "cyberpunkYellow"} items-center text-2xl px-4 font-semibold` }>Navbar 3</a>
+				<a href={"#aboutMe"} className={ `text-${isYellowBg ? "black" : "cyberpunkYellow"} items-center text-2xl px-4 font-semibold` }>// About Me</a>
+				<a className={ `text-${isYellowBg ? "black" : "cyberpunkYellow"} items-center text-2xl px-4 font-semibold` }>// Navbar 2</a>
+				<a className={ `text-${isYellowBg ? "black" : "cyberpunkYellow"} items-center text-2xl px-4 font-semibold` }>// Navbar 3</a>
 			</div>
 		</nav>
 	);

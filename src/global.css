@@ -15,6 +15,11 @@ body {
     background: rgba(0, 0, 0, 1);
 }
 
+Canvas {
+    width: 1000px;
+    height: 1000px;
+}
+
 .project-image-odd {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 100%);
     mask-image: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.8) 100%);
@@ -54,3 +59,9 @@ body {
     );
     mask-size: 100% 100%;
 }
+
+.power-animation {
+    background: radial-gradient(circle, rgba(0,255,255,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+
+
