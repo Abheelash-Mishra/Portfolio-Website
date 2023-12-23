@@ -27,13 +27,13 @@ function App() {
 			<Experience />
 			<ContactMe />
 
-			{/*<Canvas>*/}
-			{/*	<Suspense fallback={null}>*/}
-			{/*		/!*<OrbitControls />*!/*/}
-			{/*		<pointLight intensity={5} position={[0,3,4]} />*/}
-			{/*		<MonitorV2 />*/}
-			{/*	</Suspense>*/}
-			{/*</Canvas>*/}
+			<Canvas>
+				<Suspense fallback={null}>
+					{/*<OrbitControls />*/}
+					<pointLight intensity={5} position={[0,3,4]} />
+					<MonitorV2 />
+				</Suspense>
+			</Canvas>
 
 		</div>
 
