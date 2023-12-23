@@ -47,12 +47,12 @@ const ContactMe = () => {
 			setCurrInput(0);
 
 
-			// emailjs.sendForm('service_e9mw3ci', 'template_kpov14r', form.current, 'ho0x6-htbbzk46VOU')
-			// 	.then((result) => {
-			// 		console.log("Mail Sent!")
-			// 	}, (error) => {
-			// 		console.log(error);
-			// 	});
+			emailjs.sendForm('service_e9mw3ci', 'template_kpov14r', form.current, 'ho0x6-htbbzk46VOU')
+				.then((result) => {
+					console.log("Mail Sent!")
+				}, (error) => {
+					console.log(error);
+				});
 
 			setTimeout(() => {
 				setIsSubmitted(false);
