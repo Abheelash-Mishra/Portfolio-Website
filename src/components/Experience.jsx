@@ -17,8 +17,8 @@ const Experience = () => {
 	};
 
 	return (
-		<div className={ "black-dotted-bg w-full text-cyberpunkYellow" }>
-			<h1 className={ "text-xl text-aqua mt-32 mb-8 mx-8 border-b-2 border-aqua/20" }>/// EXPERIENCE.MODULE....</h1>
+		<div className={ "black-dotted-bg w-full text-cyberpunkYellow py-8" }>
+			<h1 className={ "text-xl text-aqua mt-32 mb-8 mx-8 border-b-2 border-aqua/20 bg-black" }>/// EXPERIENCE.MODULE....</h1>
 
 			<motion.div
 				initial="offscreen"
