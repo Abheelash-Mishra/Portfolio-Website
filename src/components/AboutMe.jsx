@@ -86,18 +86,18 @@ const AboutMe = () => {
 					<br/>
 					<br/>
 
-					<div className={ "w-full flex flex-row items-center justify-between px-32" }>
-						<p>Anyways, get my resume here!</p>
-						<motion.button
-							whileHover={ { scale: 1.1 } }
-							whileTap={ { scale: 0.9 } }
-							className={ "border-2 border-cyberpunkYellow rounded-full px-8 py-4 hover:bg-cyberpunkYellow hover:text-black font-semibold" }
-						>
-							<a href="#">
-								Resume <i className="fa-solid fa-download"/>
-							</a>
-						</motion.button>
-					</div>
+					{/*<div className={ "w-full flex flex-row items-center justify-between px-32" }>*/}
+					{/*	<p>Anyways, get my resume here!</p>*/}
+					{/*	<motion.button*/}
+					{/*		whileHover={ { scale: 1.1 } }*/}
+					{/*		whileTap={ { scale: 0.9 } }*/}
+					{/*		className={ "border-2 border-cyberpunkYellow rounded-full px-8 py-4 hover:bg-cyberpunkYellow hover:text-black font-semibold" }*/}
+					{/*	>*/}
+					{/*		<a href="#">*/}
+					{/*			Resume <i className="fa-solid fa-download"/>*/}
+					{/*		</a>*/}
+					{/*	</motion.button>*/}
+					{/*</div>*/}
 				</p>
 			</div>
 			<motion.div
