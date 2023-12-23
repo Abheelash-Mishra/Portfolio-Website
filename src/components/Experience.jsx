@@ -10,7 +10,7 @@ const Experience = () => {
 			transition: {
 				type: "spring",
 				bounce: 0.4,
-				duration: 3,
+				duration: 2,
 				delay: 1
 			}
 		}
