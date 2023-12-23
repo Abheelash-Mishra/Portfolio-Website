@@ -6,10 +6,10 @@ import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
 import ContactMe from "./components/ContactMe.jsx";
 
-import { MonitorModel } from "./components/canvas/Monitor.jsx";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { OrbitControls } from "@react-three/drei";
+import { MonitorV2 } from "./components/canvas/MonitorV2.jsx";
 
 function App() {
 	return (
@@ -27,13 +27,13 @@ function App() {
 			<Experience />
 			<ContactMe />
 
-			<Canvas shadows>
-				<Suspense fallback={null}>
-					<OrbitControls />
-					<ambientLight intensity={1} />
-					<MonitorModel />
-				</Suspense>
-			</Canvas>
+			{/*<Canvas>*/}
+			{/*	<Suspense fallback={null}>*/}
+			{/*		/!*<OrbitControls />*!/*/}
+			{/*		<pointLight intensity={5} position={[0,3,4]} />*/}
+			{/*		<MonitorV2 />*/}
+			{/*	</Suspense>*/}
+			{/*</Canvas>*/}
 
 		</div>
 
