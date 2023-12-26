@@ -7,11 +7,12 @@ import Experience from "./components/Experience.jsx";
 import ContactMe from "./components/ContactMe.jsx";
 
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { MonitorV2 } from "./components/canvas/MonitorV2.jsx";
 
 function App() {
+	const [isActive, setIsActive] = useState(false)
 	return (
 		<div className={ "flex flex-col items-center" }>
 			<Navbar/>
@@ -25,13 +26,13 @@ function App() {
 
 			<Projects/>
 			<Experience />
-			<ContactMe />
+			<ContactMe setIsActive={setIsActive} />
 
 			<Canvas>
 				<Suspense fallback={null}>
-					{/*<OrbitControls />*/}
+					<OrbitControls />
 					<pointLight intensity={5} position={[0,3,4]} />
-					<MonitorV2 />
+					<MonitorV2 isActive={isActive} />
 				</Suspense>
 			</Canvas>
 
