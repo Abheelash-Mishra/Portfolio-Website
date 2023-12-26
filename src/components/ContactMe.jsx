@@ -1,25 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useInView } from "react-intersection-observer";
 
-const ContactMe = ({setIsActive}) => {
+const ContactMe = () => {
 	const [currInput, setCurrInput] = useState(0);
 	const [formData, setFormData] = useState({ "from_name": "", "from_email": "", "message": "" });
 	const [isSubmitted, setIsSubmitted] = useState(false);
 
 	const [invalidForm, setInvalidForm] = useState(false)
-
-	const [ref, inView] = useInView({
-		triggerOnce: true,
-	});
-
-	useEffect(() => {
-		if (inView) {
-			setIsActive(true);
-		}
-	}, [inView, setIsActive]);
-
 
 	const form = useRef();
 
@@ -73,7 +61,7 @@ const ContactMe = ({setIsActive}) => {
 	};
 
 	return (
-		<div ref={ref} className={ "w-full flex flex-col justify-center items-center" }>
+		<div className={ "w-full flex flex-col justify-center items-center" }>
 			<div className={ "w-full" }>
 				<h1 className={ "text-2xl text-aqua mb-16 mx-8 border-b-2 border-aqua/20" }>/// CONTACT.MODULE....</h1>
 			</div>
