@@ -74,7 +74,7 @@ Canvas {
             to top,
             transparent 0%,
             rgba(255, 252, 10, 1) 0%,
-            rgba(255, 252, 10, 1) 80%,
+            rgba(255, 252, 10, 1) 90%,
             rgba(255, 252, 10, 0) 100%
     );
     mask-size: 100% 100%;
