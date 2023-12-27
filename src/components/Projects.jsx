@@ -11,7 +11,6 @@ const Projects = () => {
 		const handleResize = () => {
 			setIsSmallScreen(window.innerWidth < 550);
 			setIsImageVisible(window.innerWidth > 1300);
-			console.log(isSmallScreen, isImageVisible)
 		};
 
 		window.addEventListener('resize', handleResize);
