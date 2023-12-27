@@ -50,10 +50,10 @@ const AboutMe = () => {
 			whileInView="onscreen"
 			viewport={ { once: true } }
 			variants={ aboutMeVariants }
-			className={ "w-full h-full flex flex-row my-20" }
+			className={ "w-full h-full flex lg:flex-row flex-col lg:my-20 my-12" }
 		>
-			<div className={ "w-full mx-20 my-10" }>
-				<p className={ "flex flex-col items-center text-cyberpunkYellow text-xl text-justify" }>
+			<div className={ "lg:w-full w-fit lg:mx-20 mx-12 my-10" }>
+				<p className={ "flex flex-col items-center text-cyberpunkYellow lg:text-xl text-base text-justify" }>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet luctus nunc ac congue.
 					Cras
 					gravida lorem odio, sit amet lacinia ante malesuada mollis. Duis et magna dignissim neque cursus

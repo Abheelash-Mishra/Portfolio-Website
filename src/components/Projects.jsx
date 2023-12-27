@@ -1,8 +1,23 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Projects = () => {
 	const [isOpen, setIsOpen] = useState([]);
+
+	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 550);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsSmallScreen(window.innerWidth < 550);
+			console.log(isSmallScreen)
+		};
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, [isSmallScreen]);
 
 	const toggleDetails = (projectIndex) => {
 		const newIsOpen = [...isOpen];
@@ -83,13 +98,14 @@ const Projects = () => {
 		},
 	];
 
+	// noinspection JSValidateTypes
 	return (
 		<div className="flex flex-col items-center w-full bg-cyberpunkYellow py-20 pb-[400px]" id={ "yellow-bg" }>
 			<div className={"w-5/6 border-4 border-t-2 border-b-2 border-black"}>
 			{ projectArray.map((project, index) => (
 				<motion.button
 					key={ project.id }
-					className="flex flex-col w-full border-t-2 border-b-2 border-black bg-cyberpunkYellow"
+					className="flex flex-col items-center justify-center w-full border-t-2 border-b-2 border-black bg-cyberpunkYellow"
 					onClick={ () => toggleDetails(index) }
 					animate={ { height: isOpen[index] ? expandedHeight : 250 } }
 					transition={ { duration: 0.5, ease: "easeInOut" } }
@@ -97,14 +113,25 @@ const Projects = () => {
 					{ !isOpen[index] && (
 						<>
 							<div className={ `w-full flex flex-row justify-between` }>
-								{ isEven(index) && (
-									<div className={ "w-1/3 text-xl items-center my-auto" }>
+								{ isEven(index) && !isSmallScreen && (
+									<div className={ "lg:w-1/3 w-2/3 LaptopL:text-xl text-base items-center my-10" }>
 										{ project.tech.map((tech, index) => (
 											<motion.div
 												key={ index }
 												whileHover={ { scale: 1.1 } }
 												whileTap={ { scale: 0.9 } }
-												className="inline-block border-2 border-black rounded-full px-6 py-2 hover:text-cyberpunkYellow hover:bg-black font-semibold m-1 cursor-default"
+												className="
+													inline-block
+													border-2
+													border-black
+													rounded-full
+													px-4 py-1
+													LaptopL:px-6 LaptopL:py-2
+													hover:text-cyberpunkYellow
+													hover:bg-black
+													font-semibold
+													m-1
+													cursor-default"
 											>
 												{ tech }
 											</motion.div>
@@ -113,19 +140,30 @@ const Projects = () => {
 								) }
 
 
-								<div className={ "w-1/4 flex flex-col px-8 py-10" }>
+								<div className={ "projectMobile:w-1/3 w-full flex flex-col projectMobile:px-5 projectMobile:py-5 " }>
 									<p className="text-8xl font-bold mb-2">{ project.id }</p>
-									<p className="text-4xl font-semibold mb-4">/// { project.name }</p>
+									<p className="text-3xl lg:text-4xl font-semibold mb-4">/// { project.name }</p>
 								</div>
 
-								{ !isEven(index) && (
-									<div className={ "w-1/3 text-xl items-center my-auto" }>
+								{ !isEven(index) && !isSmallScreen && (
+									<div className={ "lg:w-2/3 w-2/3 LaptopL:text-xl text-base items-center my-10" }>
 										{ project.tech.map((tech, index) => (
 											<motion.div
 												key={ index }
 												whileHover={ { scale: 1.1 } }
 												whileTap={ { scale: 0.9 } }
-												className="inline-block border-2 border-black rounded-full px-6 py-2 hover:text-cyberpunkYellow hover:bg-black font-semibold m-1 cursor-default"
+												className="
+													inline-block
+													border-2
+													border-black
+													rounded-full
+													px-4 py-1
+													LaptopL:px-6 LaptopL:py-2
+													hover:text-cyberpunkYellow
+													hover:bg-black
+													font-semibold
+													m-1
+													cursor-default"
 											>
 												{ tech }
 											</motion.div>
@@ -169,15 +207,15 @@ const Projects = () => {
 										</a>
 									</motion.button>
 
-									<motion.button
-										whileHover={ { scale: 1.1 } }
-										whileTap={ { scale: 0.9 } }
-										className="border-2 border-black rounded-full px-8 py-4 hover:text-cyberpunkYellow hover:bg-black font-semibold m-3"
-									>
-										<a href="">
-											Live Deploy <i className="fa-solid fa-up-right-from-square"></i>
-										</a>
-									</motion.button>
+									{/*<motion.button*/}
+									{/*	whileHover={ { scale: 1.1 } }*/}
+									{/*	whileTap={ { scale: 0.9 } }*/}
+									{/*	className="border-2 border-black rounded-full px-8 py-4 hover:text-cyberpunkYellow hover:bg-black font-semibold m-3"*/}
+									{/*>*/}
+									{/*	<a href="">*/}
+									{/*		Live Deploy <i className="fa-solid fa-up-right-from-square"></i>*/}
+									{/*	</a>*/}
+									{/*</motion.button>*/}
 								</div>
 							</div>
 

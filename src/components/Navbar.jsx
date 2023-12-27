@@ -6,7 +6,7 @@ const Navbar = () => {
 	const handleScroll = () => {
 		const scrollPosition = window.scrollY;
 
-		const changePosition = 800;
+		const changePosition = 0;
 
 		if (scrollPosition > changePosition) {
 			setNavBackground('black');
@@ -24,7 +24,7 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={ `flex flex-row justify-between items-center text-2xl pt-4 lg:px-8 sm:px-1 bg-${navBackground} fixed top-0 left-0 w-full z-50 border-b-2 border-aqua` }
+			className={ `flex flex-row justify-between items-center text-2xl pt-4 lg:px-8 sm:px-1 bg-${navBackground} bg-black fixed top-0 left-0 w-full z-50 border-b-2 border-aqua` }
 		>
 			<div className={"flex flex-row"}>
 				<a href="#hero" className={"lg:max-w-[250px] sm:max-w-[150px]"}>
