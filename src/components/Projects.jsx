@@ -5,11 +5,13 @@ const Projects = () => {
 	const [isOpen, setIsOpen] = useState([]);
 
 	const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 550);
+	const [isImageVisible, setIsImageVisible] = useState(window.innerWidth > 1300)
 
 	useEffect(() => {
 		const handleResize = () => {
 			setIsSmallScreen(window.innerWidth < 550);
-			console.log(isSmallScreen)
+			setIsImageVisible(window.innerWidth > 1300);
+			console.log(isSmallScreen, isImageVisible)
 		};
 
 		window.addEventListener('resize', handleResize);
@@ -17,7 +19,7 @@ const Projects = () => {
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
-	}, [isSmallScreen]);
+	}, [isImageVisible, isSmallScreen]);
 
 	const toggleDetails = (projectIndex) => {
 		const newIsOpen = [...isOpen];
@@ -112,9 +114,9 @@ const Projects = () => {
 				>
 					{ !isOpen[index] && (
 						<>
-							<div className={ `w-full flex flex-row justify-between` }>
+							<div className={ `w-full flex flex-row justify-between items-center` }>
 								{ isEven(index) && !isSmallScreen && (
-									<div className={ "lg:w-1/3 w-2/3 LaptopL:text-xl text-base items-center my-10" }>
+									<div className={ "lg:w-1/3 w-2/3 h-fit LaptopL:text-xl text-base items-center my-10" }>
 										{ project.tech.map((tech, index) => (
 											<motion.div
 												key={ index }
@@ -131,7 +133,8 @@ const Projects = () => {
 													hover:bg-black
 													font-semibold
 													m-1
-													cursor-default"
+													cursor-default
+													"
 											>
 												{ tech }
 											</motion.div>
@@ -140,9 +143,9 @@ const Projects = () => {
 								) }
 
 
-								<div className={ "projectMobile:w-1/3 w-full flex flex-col projectMobile:px-5 projectMobile:py-5 " }>
-									<p className="text-8xl font-bold mb-2">{ project.id }</p>
-									<p className="text-3xl lg:text-4xl font-semibold mb-4">/// { project.name }</p>
+								<div className={ "projectMobile:w-1/3 w-full flex flex-col justify-center projectMobile:px-5 projectMobile:py-5 " }>
+									<p className="text-8xl font-bold pb-2">{ project.id }</p>
+									<p className="text-3xl lg:text-4xl font-semibold pb-4">/// { project.name }</p>
 								</div>
 
 								{ !isEven(index) && !isSmallScreen && (
@@ -178,32 +181,32 @@ const Projects = () => {
 						<motion.div
 							className="flex flex-row h-full text-xl text-gray-600"
 						>
-							{ isEven(index) && (
-								<div className="overflow-hidden w-2/3">
+							{ isEven(index) && isImageVisible && (
+								<div className="overflow-hidden w-2/3 h-full">
 									<motion.img
 										src={ project.image }
 										alt={ project.name }
 										initial="closed_even"
 										animate="open"
 										variants={ imageVariants }
-										className="project-image-even object-cover"
+										className="project-image-even object-contain"
 									/>
 								</div>
 							) }
 
 
-							<div className="w-1/3 flex flex-col p-10 text-black">
-								<p className="text-6xl font-bold text-left">/// { project.name }</p>
-								<p className="text-xl font-semibold text-justify my-8 h-32">{ project.details }</p>
+							<div className={`${isImageVisible ? 'w-1/3' : 'w-full'} flex flex-col justify-center xs:p-10 p-6 text-black`}>
+								<p className="projectMobile:text-6xl xs:text-5xl text-4xl font-bold text-left">/// { project.name }</p>
+								<p className="xs:text-xl text-lg font-semibold text-justify my-8 h-32">{ project.details }</p>
 
-								<div className="mt-12 overflow-hidden">
+								<div className="projectMobile:mt-6 mt-12 overflow-hidden">
 									<motion.button
 										whileHover={ { scale: 1.1 } }
 										whileTap={ { scale: 0.9 } }
-										className="border-2 border-black rounded-full px-8 py-4 hover:text-cyberpunkYellow hover:bg-black font-semibold m-3"
+										className="border-2 border-black rounded-full xs:px-8 xs:py-4 px-6 py-3 hover:text-cyberpunkYellow hover:bg-black font-semibold m-3"
 									>
 										<a href="#">
-											Github Repo <i className="fa-solid fa-up-right-from-square"></i>
+											Github <i className="fa-solid fa-up-right-from-square ml-2" />
 										</a>
 									</motion.button>
 
@@ -220,7 +223,7 @@ const Projects = () => {
 							</div>
 
 
-							{ !isEven(index) && (
+							{ !isEven(index) && !isSmallScreen && (
 								<div className="overflow-hidden w-2/3">
 									<motion.img
 										src={ project.image }

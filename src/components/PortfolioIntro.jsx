@@ -23,11 +23,11 @@ const PortfolioIntro = () => {
 			initial="offscreen"
 			whileInView="onscreen"
 			viewport={{once: true}}
-			className={ "w-full text-cyberpunkYellow lg:text-8xl md:text-6xl text-3xl" }
+			className={ "w-full text-cyberpunkYellow lg:text-8xl md:text-6xl xs:text-4xl text-3xl xs:text-left text-center" }
 			variants={ introVariants }
 			id={"aboutMe"}
 		>
-			<h1 className={"lg:mx-20 mx-12"}> Welcome To My Portfolio </h1>
+			<h1 className={"lg:mx-20 xs:mx-12 mx-6"}> Welcome To My Portfolio </h1>
 		</motion.div>
 	);
 };
