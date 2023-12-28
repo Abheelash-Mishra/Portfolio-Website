@@ -36,9 +36,8 @@ const Experience = () => {
 						<p className={ "my-auto xs:text-xl text-lg text-right" }>August 2023 - Present</p>
 					</div>
 					<p className={ "py-4 text-justify xs:text-xl text-base" }>
-						I am currently working alongside my team to develop a CNN model that can
-						take low-light images and
-						their monochrome image counterpart as inputs, and output an image that is well-lit.
+						I am currently working alongside my team to develop a CNN model that can take low-light
+						images and their monochrome image counterpart as inputs, and output an image that is well-lit.
 					</p>
 				</div>
 			</motion.div>

@@ -10,7 +10,7 @@ import Footer from "./components/Footer.jsx";
 function App() {
 	return (
 		<div className={ "flex flex-col items-center" }>
-			<Navbar/>
+			{/*<Navbar/>*/}
 			<Hero/>
 			<PortfolioIntro/>
 			<AboutMe/>

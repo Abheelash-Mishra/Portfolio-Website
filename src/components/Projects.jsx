@@ -198,7 +198,7 @@ const Projects = () => {
 								<p className="projectMobile:text-6xl xs:text-5xl text-4xl font-bold text-left">/// { project.name }</p>
 								<p className="xs:text-xl text-lg font-semibold text-justify my-8 h-32">{ project.details }</p>
 
-								<div className="projectMobile:mt-6 mt-12 overflow-hidden">
+								<div className="projectMobile:mt-6 mt-6 overflow-hidden">
 									<motion.button
 										whileHover={ { scale: 1.1 } }
 										whileTap={ { scale: 0.9 } }

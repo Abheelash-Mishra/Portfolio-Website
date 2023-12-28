@@ -41,10 +41,8 @@ const ContactMe = () => {
 		e.preventDefault();
 
 		if (formData.message !== "") {
-
 			setIsSubmitted(true);
 			setCurrInput(0);
-
 
 			emailjs.sendForm('service_e9mw3ci', 'template_kpov14r', form.current, 'ho0x6-htbbzk46VOU')
 				.then((result) => {
@@ -63,12 +61,12 @@ const ContactMe = () => {
 	return (
 		<div className={ "w-full flex flex-col justify-center items-center" }>
 			<div className={ "w-full" }>
-				<h1 className={ "text-2xl text-aqua mb-16 mx-8 border-b-2 border-aqua/20" }>/// CONTACT.MODULE....</h1>
+				<h1 className={ "xs:text-2xl text-xl font-bold text-aqua xs:mb-16 mb-8 mx-8 border-b-2 border-aqua/20 bg-black" }>/// EXPERIENCE.MODULE....</h1>
 			</div>
 
 			{ !isSubmitted && (
 				<div className={ "w-full flex flex-col items-center text-cyberpunkYellow px-8" }>
-					<p className={ "w-3/5 text-2xl text-justify" }>
+					<p className={ "lg:w-3/5 w-full xs:text-2xl text-lg text-justify" }>
 						Feel free to reach out and connect! I'm always open to new opportunities, collaborations, and
 						conversations. Whether you have a project in mind, want to discuss potential partnerships, or
 						simply want to say hello, I'm just a message away. Your thoughts and ideas are valuable,
@@ -77,7 +75,7 @@ const ContactMe = () => {
 				</div>
 			) }
 			<AnimatePresence>
-				<form ref={ form } className={ "w-2/3 px-16 py-8 text-cyberpunkYellow" }>
+				<form ref={ form } className={ "lg:w-2/3 w-full lg:px-16 px-8 lg:py-8 py-4 text-cyberpunkYellow" }>
 					{ !isSubmitted && (
 						<div className={ "flex flex-col py-4" }>
 							<motion.input
@@ -92,7 +90,7 @@ const ContactMe = () => {
 								animate={ { opacity: 1 } }
 								exit={ { opacity: 0 } }
 								transition={ { duration: 1 } }
-								className={ `h-14 text-2xl py-1 px-4 font-semibold bg-black border-2 rounded-lg border-aqua focus:outline-none placeholder-aqua/40 ${ currInput !== 0 ? 'hidden' : '' } ${invalidForm ? 'shake' : ''}` }
+								className={ `xs:h-14 h-10 xs:text-2xl text-xl py-1 px-4 font-semibold bg-black border-2 rounded-lg border-aqua focus:outline-none placeholder-aqua/40 ${ currInput !== 0 ? 'hidden' : '' } ${ invalidForm ? 'shake' : '' }` }
 							/>
 
 							<motion.input
@@ -107,7 +105,7 @@ const ContactMe = () => {
 								animate={ { opacity: 1 } }
 								exit={ { opacity: 0 } }
 								transition={ { duration: 1 } }
-								className={ `h-14 text-2xl py-1 px-4 font-semibold bg-black border-2 rounded-lg border-aqua focus:outline-none placeholder-aqua/40 ${ currInput !== 1 ? 'hidden' : '' } ${invalidForm ? 'shake' : ''}` }
+								className={ `xs:h-14 h-10 xs:text-2xl text-xl py-1 px-4 font-semibold bg-black border-2 rounded-lg border-aqua focus:outline-none placeholder-aqua/40 ${ currInput !== 1 ? 'hidden' : '' } ${ invalidForm ? 'shake' : '' }` }
 							/>
 
 							<motion.textarea
@@ -123,10 +121,10 @@ const ContactMe = () => {
 								animate={ { opacity: 1 } }
 								exit={ { opacity: 0 } }
 								transition={ { duration: 1 } }
-								className={ `text-2xl py-2 px-4 font-semibold bg-black border-2 rounded-lg border-aqua focus:outline-none placeholder-aqua/40 ${ currInput !== 2 ? 'hidden' : '' } ${invalidForm ? 'shake' : ''}` }
+								className={ `xs:text-2xl text-xl py-2 px-4 font-semibold bg-black border-2 rounded-lg border-aqua focus:outline-none placeholder-aqua/40 ${ currInput !== 2 ? 'hidden' : '' } ${ invalidForm ? 'shake' : '' }` }
 							/>
 
-							<motion.div className={ "py-4 text-2xl" }>
+							<motion.div className={ "py-4 xs:text-2xl text-xl" }>
 								<motion.button
 									whileHover={ currInput !== 0 ? { scale: 1.1 } : {} }
 									whileTap={ currInput !== 0 ? { scale: 0.9 } : {} }
@@ -156,6 +154,32 @@ const ContactMe = () => {
 									Submit
 								</motion.button>
 							</motion.div>
+
+							<br/>
+
+							<div className={ "flex flex-col justify-center items-center xs:text-2xl text-lg text-center" }>
+								<p>You can also reach out to me through my socials here!</p>
+							</div>
+							<div className={ "xs:text-2xl text-xl flex justify-center items-center py-4" }>
+								<motion.button
+									whileHover={ { scale: 1.1 } }
+									whileTap={ { scale: 0.9 } }
+								>
+									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-full mx-10 xs:p-3 p-2 hover:text-black hover:bg-cyberpunkYellow" }
+									   href={ "https://github.com/abheelash-mishra" } target={ "_blank" } rel={ "noreferrer" }>
+										<i className="fa-brands fa-github pr-2"/> Github
+									</a>
+								</motion.button>
+								<motion.button
+									whileHover={ { scale: 1.1 } }
+									whileTap={ { scale: 0.9 } }
+								>
+									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-full mx-10 xs:p-3 p-2 hover:text-black hover:bg-cyberpunkYellow" }
+									   href={ "https://www.linkedin.com/in/abheelash-mishra/" } target={ "_blank" } rel={ "noreferrer" }>
+										<i className="fa-brands fa-linkedin pr-2"/> LinkedIn
+									</a>
+								</motion.button>
+							</div>
 						</div>
 					) }
 
