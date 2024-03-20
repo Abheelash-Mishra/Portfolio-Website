@@ -54,50 +54,38 @@ const AboutMe = () => {
 		>
 			<div className={ "lg:w-full w-fit lg:mx-20 xs:mx-12 xs:my-10 mx-6 my-5" }>
 				<p className={ "flex flex-col items-center text-cyberpunkYellow lg:text-xl text-base text-justify" }>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet luctus nunc ac congue.
-					Cras
-					gravida lorem odio, sit amet lacinia ante malesuada mollis. Duis et magna dignissim neque cursus
-					dignissim a nec nulla. Sed placerat in nibh posuere vulputate. Vivamus dictum, dolor vitae
-					sollicitudin
-					molestie, enim felis suscipit tellus, at lobortis velit nulla eget lacus. Etiam lacinia lectus quis
-					placerat ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-					curae;
-					Integer vitae ex enim. Duis vehicula arcu nec sem eleifend, quis scelerisque nibh aliquet.
 
-					<br/>
-					<br/>
+					Hey everyone! I am Abheelash Mishra, a full-stack developer currently in my pre-final year at SRMIST. I chose computer science as I found
+					computers fascinating as a kid, and I always did love solving a good problem! I figured I should dabble in web development as designing the
+					backend architecture is some of the most fun I have had in coding, especially DevOps!
 
-					Duis vestibulum vulputate nisl ac tincidunt. Duis fringilla et lectus sed dictum. Quisque sit amet
-					ante
-					a nunc iaculis rhoncus. Donec egestas, sem sit amet faucibus auctor, ante velit bibendum justo, quis
-					mollis purus arcu quis metus. Phasellus convallis pharetra orci, a porttitor mauris accumsan eget.
-					Quisque aliquam finibus ex nec sollicitudin. Aenean feugiat, augue et venenatis facilisis, nunc
-					neque
-					molestie nibh, auctor laoreet velit mi id orci. Curabitur posuere ante dolor, eget aliquet mi
-					consequat
-					vel. In mattis, libero accumsan facilisis iaculis, urna urna vehicula ligula, in suscipit velit est
-					sit
-					amet urna. Donec sed enim mauris. Morbi dolor sem, ultrices pharetra justo in, semper finibus
-					turpis.
-					Donec risus metus, cursus non eleifend eu, vestibulum eget nisl. Integer mattis turpis at massa
-					sagittis
-					accumsan. In eu nisl vel massa suscipit convallis eget in tellus.
+					<br />
+					<br />
 
-					<br/>
-					<br/>
+					As for my tech stack, I utilize React.js for my frontend, alongside with Three.js occasionally, to create visually stunning sites. As for my
+					backend, I use Node.js or Django to power my application. I am giving Next.js a try right now and so far it&apos;s been great! I am also
+					exploring Docker and Kubernetes, alongside with cloud infrastructures such as Amazon Web Services, Oracle Cloud Infrastructure, and Google
+					Cloud Platform. I am a strong problem solver and debugger, quickly adaptable to new tech stacks that I have not used before, and am
+					well-versed in my computer fundamentals.
 
-					{/*<div className={ "w-full flex flex-row items-center justify-between px-32" }>*/}
-					{/*	<p>Anyways, get my resume here!</p>*/}
-					{/*	<motion.button*/}
-					{/*		whileHover={ { scale: 1.1 } }*/}
-					{/*		whileTap={ { scale: 0.9 } }*/}
-					{/*		className={ "border-2 border-cyberpunkYellow rounded-full px-8 py-4 hover:bg-cyberpunkYellow hover:text-black font-semibold" }*/}
-					{/*	>*/}
-					{/*		<a href="#">*/}
-					{/*			Resume <i className="fa-solid fa-download"/>*/}
-					{/*		</a>*/}
-					{/*	</motion.button>*/}
-					{/*</div>*/}
+					<br />
+					<br />
+
+					Do check out my socials and maybe reach out to me! :)
+
+
+					{/*<div className={ "w-full flex flex-row items-center justify-between px-32" }>*/ }
+					{/*	<p>Anyways, get my resume here!</p>*/ }
+					{/*	<motion.button*/ }
+					{/*		whileHover={ { scale: 1.1 } }*/ }
+					{/*		whileTap={ { scale: 0.9 } }*/ }
+					{/*		className={ "border-2 border-cyberpunkYellow rounded-full px-8 py-4 hover:bg-cyberpunkYellow hover:text-black font-semibold" }*/ }
+					{/*	>*/ }
+					{/*		<a href="#">*/ }
+					{/*			Resume <i className="fa-solid fa-download"/>*/ }
+					{/*		</a>*/ }
+					{/*	</motion.button>*/ }
+					{/*</div>*/ }
 				</p>
 			</div>
 			<motion.div
