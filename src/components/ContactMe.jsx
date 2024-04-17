@@ -155,7 +155,7 @@ const ContactMe = () => {
 								</motion.button>
 							</motion.div>
 
-							<br/>
+							<br />
 
 							<div className={ "flex flex-col justify-center items-center xs:text-2xl text-lg text-center" }>
 								<p>You can also reach out to me through my socials here!</p>
@@ -165,18 +165,18 @@ const ContactMe = () => {
 									whileHover={ { scale: 1.1 } }
 									whileTap={ { scale: 0.9 } }
 								>
-									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-full mx-10 xs:p-3 p-2 hover:text-black hover:bg-cyberpunkYellow" }
+									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-2xl mx-10 xs:p-3 p-4 hover:text-black hover:bg-cyberpunkYellow" }
 									   href={ "https://github.com/abheelash-mishra" } target={ "_blank" } rel={ "noreferrer" }>
-										<i className="fa-brands fa-github pr-2"/> Github
+										<i className="fa-brands fa-github pr-2" /> GitHub
 									</a>
 								</motion.button>
 								<motion.button
 									whileHover={ { scale: 1.1 } }
 									whileTap={ { scale: 0.9 } }
 								>
-									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-full mx-10 xs:p-3 p-2 hover:text-black hover:bg-cyberpunkYellow" }
+									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-2xl mx-10 xs:p-3 p-2 hover:text-black hover:bg-cyberpunkYellow" }
 									   href={ "https://www.linkedin.com/in/abheelash-mishra/" } target={ "_blank" } rel={ "noreferrer" }>
-										<i className="fa-brands fa-linkedin pr-2"/> LinkedIn
+										<i className="fa-brands fa-linkedin pr-2" /> LinkedIn
 									</a>
 								</motion.button>
 							</div>
@@ -192,7 +192,7 @@ const ContactMe = () => {
 								transition={ { duration: 2 } }
 								className={ "h-[400px] text-3xl flex justify-center items-center" }
 							>
-								Thank you for your message! I'll get back to you as soon as possible :)
+								Thank you for reaching out! I'll get back to you as soon as possible :)
 							</motion.p>
 						</div>
 
