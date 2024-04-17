@@ -3,8 +3,8 @@ const Footer = () => {
 		"My laptop can finally rest from its job as a room heater. Thanks Blender!",
 		"Heard about Outer Wilds? Trust me, it's phenomenal. Peak world-building and game design.",
 		"Oh Wow! Looks like the random function chose you to see this little easter egg. Click",
-		"UV Unwrapping awaits those in the deepest parts of the afterlife.",
-		"Ever had a piece of code just NOT work, spend hours trying to debug it, only to somehow fix it by simply rerunning the dev environment? I need a break.",
+		"UV unwrapping awaits those in the deepest parts of the afterlife.",
+		"Ever had a piece of code just NOT work, spend hours trying to debug it, only to somehow fix it by simply rerunning the dev environment? I need a break....",
 		"Fus Ro Dah!",
 	]
 
