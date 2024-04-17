@@ -64,7 +64,7 @@ const Projects = () => {
 						"Integrated with the Monaco Editor (the editor of VS Code), it allows users to enjoy all the modern features they can expect from an IDE right in the application," +
 						"which proves to be especially useful while practicing.",
 			// "image": "/homescape.png",
-			"tech": ["Next.js", "Prisma", "NextAuth", "MongoDB", "React.js", "Node.js", "TailwindCSS"],
+			"tech": ["Next.js", "Prisma", "NextAuth", "AWS" , "Docker", "MongoDB", "React.js", "Node.js", "TailwindCSS"],
 			"link": "https://github.com/Abheelash-Mishra/AlgoLab"
 		},
 		{
@@ -189,7 +189,7 @@ const Projects = () => {
 
 
 								<div className={ `${ isImageVisible ? 'w-1/3' : 'w-full' } flex flex-col xs:px-10 p-6 text-black` }>
-									<p className="projectMobile:text-6xl xs:text-5xl text-4xl font-bold text-left pt-6">/// { project.name }</p>
+									<p className="projectMobile:text-6xl xs:text-5xl text-4xl font-bold text-left pt-6 mb-6">/// { project.name }</p>
 									<p className="projectMobile:text-2xl text-lg font-semibold text-justify h-64 ">{ project.details }</p>
 
 									<div className="projectMobile:mt-6 mt-12 overflow-hidden">
