@@ -55,7 +55,7 @@ const AboutMe = () => {
 			<div className={ "lg:w-full w-fit lg:mx-20 xs:mx-12 xs:my-10 mx-6 my-5" }>
 				<p className={ "flex flex-col items-center text-cyberpunkYellow lg:text-xl text-base text-justify" }>
 
-					Hey everyone! I am Abheelash Mishra, a full-stack developer currently in my pre-final year at SRMIST. I chose computer science as I found
+					Hey everyone! I am Abheelash Mishra, a full-stack developer currently in my final year at SRMIST. I chose computer science as I found
 					computers fascinating as a kid, and I always did love solving a good problem! I figured I should dabble in web development as designing the
 					backend architecture is some of the most fun I have had in coding, especially DevOps!
 
