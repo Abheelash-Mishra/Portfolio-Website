@@ -17,7 +17,7 @@ const Experience = () => {
 	};
 
 	return (
-		<div className={ "black-dotted-bg w-full text-cyberpunkYellow py-8" }>
+		<div className={ "black-dotted-bg w-full text-cyberpunkYellow py-8" } id={"experience"}>
 			<h1 className={ "xs:text-2xl text-xl font-bold text-aqua mt-36 mb-8 mx-8 border-b-2 border-aqua/20 bg-black" }>/// EXPERIENCE.MODULE....</h1>
 
 			<motion.div

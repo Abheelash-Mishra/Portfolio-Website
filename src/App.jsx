@@ -15,7 +15,7 @@ function App() {
 			<PortfolioIntro/>
 			<AboutMe/>
 
-			<div className={ "mt-32" }>
+			<div className={ "mt-32" } id={"projects"}>
 				<img src="/SectionChange.png" alt="///LOADING"/>
 			</div>
 

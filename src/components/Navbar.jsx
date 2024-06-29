@@ -1,27 +1,4 @@
-import { useEffect, useState } from "react";
-
 const Navbar = () => {
-	// const [navBackground, setNavBackground] = useState('transparent');
-	//
-	// const handleScroll = () => {
-	// 	const scrollPosition = window.scrollY;
-	//
-	// 	const changePosition = 0;
-	//
-	// 	if (scrollPosition > changePosition) {
-	// 		setNavBackground('black');
-	// 	} else {
-	// 		setNavBackground('transparent');
-	// 	}
-	// };
-	//
-	// useEffect(() => {
-	// 	document.addEventListener('scroll', handleScroll);
-	// 	return () => {
-	// 		document.removeEventListener('scroll', handleScroll);
-	// 	};
-	// }, []);
-
 	return (
 		<nav
 			className={ `flex flex-row justify-between items-center text-2xl pt-4 lg:px-8 sm:px-1 bg-transparent absolute top-0 w-full z-50` }
@@ -35,13 +12,13 @@ const Navbar = () => {
 				<a href={ "#aboutMe" } className={ `text-cyberpunkYellow items-center px-4 font-semibold` }>
 					// About Me
 				</a>
-				<a href={ "" } className={ `text-cyberpunkYellow items-center px-4 font-semibold` }>
+				<a href={ "#projects" } className={ `text-cyberpunkYellow items-center px-4 font-semibold` }>
 					// Projects
 				</a>
-				<a href={ "" } className={ `text-cyberpunkYellow items-center px-4 font-semibold` }>
+				<a href={ "#experience" } className={ `text-cyberpunkYellow items-center px-4 font-semibold` }>
 					// Experience
 				</a>
-				<a href={ "" } className={ `text-cyberpunkYellow items-center px-4 font-semibold` }>
+				<a href={ "#contact" } className={ `text-cyberpunkYellow items-center px-4 font-semibold` }>
 					// Contact Me
 				</a>
 			</div>
