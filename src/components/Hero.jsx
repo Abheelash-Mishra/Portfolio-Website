@@ -1,4 +1,5 @@
 import {useRef, useEffect} from 'react';
+import Navbar from "./Navbar.jsx";
 
 const Hero = () => {
     const videoContainerRef = useRef(null);
@@ -46,7 +47,8 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className="flex justify-center w-full relative overflow-hidden" id={"hero"}>
+        <div className="flex justify-center w-full flex-col relative overflow-hidden" id={"hero"}>
+            <Navbar></Navbar>
             <div
                 ref={videoContainerRef}
                 className="relative z-0"
