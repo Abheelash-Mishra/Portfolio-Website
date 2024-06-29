@@ -61,7 +61,7 @@ const ContactMe = () => {
 	return (
 		<div className={ "w-full flex flex-col justify-center items-center" }>
 			<div className={ "w-full" }>
-				<h1 className={ "xs:text-2xl text-xl font-bold text-aqua xs:mb-16 mb-8 mx-8 border-b-2 border-aqua/20 bg-black" }>/// EXPERIENCE.MODULE....</h1>
+				<h1 className={ "xs:text-2xl text-xl font-bold text-aqua xs:mb-16 mb-8 mx-8 my-8 border-b-2 border-aqua/20 bg-black" }>/// CONTACT.MODULE....</h1>
 			</div>
 
 			{ !isSubmitted && (
