@@ -59,12 +59,12 @@ const Projects = () => {
 	const projectArray = [
 		{
 			"id": "01",
-			"name": "AlgoLab (WIP)",
-			"details": "A full stack application built with Next.js that allows users to practice the famous 'Blind 75' sheet for their coding interview preperations. " +
-						"Integrated with the Monaco Editor (the editor of VS Code), it allows users to enjoy all the modern features they can expect from an IDE right in the application," +
-						"which proves to be especially useful while practicing.",
+			"name": "AlgoLab",
+			"details": "A full stack application built with Next.js that allows users to practice coding problems. " +
+				"Integrated with the Monaco Editor (the editor of VS Code) right within the browser, it allows users to enjoy all the modern features they can expect from an IDE right in the application," +
+				"which proves to be especially useful while practicing. By utilizing the Judge0 code execution API, users can run their code and see the output right within the application in an instant.",
 			// "image": "/homescape.png",
-			"tech": ["Next.js", "Prisma", "NextAuth", "AWS" , "Docker", "MongoDB", "React.js", "Node.js", "TailwindCSS"],
+			"tech": ["Next.js", "Prisma", "NextAuth", "AWS", "Docker", "MongoDB", "React.js", "Node.js", "TailwindCSS"],
 			"link": "https://github.com/Abheelash-Mishra/AlgoLab"
 		},
 		{
@@ -79,11 +79,14 @@ const Projects = () => {
 		},
 		{
 			"id": "03",
-			"name": "Videoware",
-			"details": "A web application that utilizes the YouTubev3 API and allows users to search for YouTube videos, view the results directly on the website and watch them as they desire.",
+			"name": "Workout Bro",
+			"details": "Workout Bro is a platform designed to help users set their workouts routines. " +
+				"Built with React.js for the frontend and Node.js/Express.js for the backend, " +
+				"the app features a responsive and user-friendly interface, ensuring a seamless experience across devices. It includes JWT-based authentication and authorization, securing user-specific data and operations. " +
+				"RESTful APIs were developed to enable smooth communication between the frontend and backend, facilitating efficient CRUD operations for workout listings. ",
 			"image": "/videoware.png",
-			"tech": ["React.js", "MaterialUI", "Vanilla CSS", "React Router"],
-			"link": "https://github.com/Abheelash-Mishra/videoware"
+			"tech": ["React.js", "Vite.js", "MongoDB", "Mongoose", "Express.js", "JWT Authentication", "Bcrypt"],
+			"link": "https://github.com/Abheelash-Mishra/Workout_Bro"
 		},
 		// {
 		// 	"id": "03",
@@ -188,17 +191,18 @@ const Projects = () => {
 								{/*) }*/ }
 
 
-								<div className={ `${ isImageVisible ? 'w-1/3' : 'w-full' } flex flex-col xs:px-10 p-6 text-black` }>
+								<div className={ `${ isImageVisible ? 'w-1/3' : 'w-full' } flex flex-col xs:px-10 p-6 projectMobile:mx-16 mx-0 text-black` }>
 									<p className="projectMobile:text-6xl xs:text-5xl text-4xl font-bold text-left pt-6 mb-6">/// { project.name }</p>
+									<br />
 									<p className="projectMobile:text-2xl text-lg font-semibold text-justify h-64 ">{ project.details }</p>
 
-									<div className="projectMobile:mt-6 mt-12 overflow-hidden">
+									<div className="overflow-hidden">
 										<motion.button
 											whileHover={ { scale: 1.1 } }
 											whileTap={ { scale: 0.9 } }
 											className="border-2 border-black rounded-full projectMobile:px-8 projectMobile:py-4 px-6 py-3 hover:text-cyberpunkYellow hover:bg-black font-semibold m-3"
 										>
-											<a href={project.link} target={"_blank"}>
+											<a href={ project.link } target={ "_blank" }>
 												Github <i className="fa-solid fa-up-right-from-square ml-2" />
 											</a>
 										</motion.button>
