@@ -165,8 +165,9 @@ const ContactMe = () => {
 									whileHover={ { scale: 1.1 } }
 									whileTap={ { scale: 0.9 } }
 								>
-									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-2xl mx-10 xs:p-3 p-4 hover:text-black hover:bg-cyberpunkYellow" }
-									   href={ "https://github.com/abheelash-mishra" } target={ "_blank" } rel={ "noreferrer" }>
+									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-2xl mx-10 px-3 xs:p-3 p-2 hover:text-black hover:bg-cyberpunkYellow" }
+										href={ "https://github.com/abheelash-mishra" } target={ "_blank" } rel={ "noreferrer" }
+									>
 										<i className="fa-brands fa-github pr-2" /> GitHub
 									</a>
 								</motion.button>
@@ -174,8 +175,9 @@ const ContactMe = () => {
 									whileHover={ { scale: 1.1 } }
 									whileTap={ { scale: 0.9 } }
 								>
-									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-2xl mx-10 xs:p-3 p-2 hover:text-black hover:bg-cyberpunkYellow" }
-									   href={ "https://www.linkedin.com/in/abheelash-mishra/" } target={ "_blank" } rel={ "noreferrer" }>
+									<a className={ "flex items-center font-semibold border-2 border-aqua rounded-2xl mx-10 px-3 xs:p-3 p-2 hover:text-black hover:bg-cyberpunkYellow" }
+										href={ "https://www.linkedin.com/in/abheelash-mishra/" } target={ "_blank" } rel={ "noreferrer" }
+									>
 										<i className="fa-brands fa-linkedin pr-2" /> LinkedIn
 									</a>
 								</motion.button>
