@@ -59,6 +59,24 @@ const Projects = () => {
 	const projectArray = [
 		{
 			"id": "01",
+			"name": "RideMate",
+			"details": "RideMate is a console-based ride-hailing application developed using Spring Boot with RESTful APIs. " +
+				"It comes implemented with robust unit and integration tests using JUnit and Mockito for reliability. " +
+				"Following SOLID principles, the core services have been refactored to enhance maintainability and scalability.",
+			"tech": ["Java", "Spring Boot", "H2", "JUnit", "Mockito"],
+			"link": "https://github.com/Abheelash-Mishra/RideMate"
+		},
+		{
+			"id": "02",
+			"name": "AWS EC2 Instance Recommender",
+			"details": "A tool designed to recommend the most efficient AWS EC2 instance types based on specific user workloads and sustainability goals. " +
+				"This project prioritizes cost-effectiveness and resource efficiency while considering proximity to AWS green data centers " +
+				"for environmental sustainability.",
+			"tech": ["Python", "Pandas", "AWS"],
+			"link": "https://github.com/Abheelash-Mishra/AWS-EC2-Instance-Recommender"
+		},
+		{
+			"id": "03",
 			"name": "AlgoLab",
 			"details": "A full stack application built with Next.js that allows users to practice coding problems. " +
 				"Integrated with the Monaco Editor (the editor of VS Code) right within the browser, it allows users to enjoy all the modern features they can expect from an IDE right in the application," +
@@ -67,27 +85,7 @@ const Projects = () => {
 			"tech": ["Next.js", "Prisma", "NextAuth", "AWS", "Docker", "MongoDB", "React.js", "Node.js", "TailwindCSS"],
 			"link": "https://github.com/Abheelash-Mishra/AlgoLab"
 		},
-		{
-			"id": "02",
-			"name": "HomeScape",
-			"details": "Homescape is a platform designed to connect travelers with unique accommodations and unforgettable experiences around the world. " +
-				"With Homescape, travelers can discover and book a wide range of accommodations tailored to their preferences, whether they're seeking a cozy cabin " +
-				"in the mountains, a chic urban loft, or a beachfront villa.",
-			"image": "/homescape.png",
-			"tech": ["Next.js", "NextAuth", "React.js", "TailwindCSS", "MongoDB", "Prisma", "Node.js"],
-			"link": "https://github.com/Abheelash-Mishra/homescape"
-		},
-		{
-			"id": "03",
-			"name": "Workout Bro",
-			"details": "Workout Bro is a platform designed to help users set their workouts routines. " +
-				"Built with React.js for the frontend and Node.js/Express.js for the backend, " +
-				"the app features a responsive and user-friendly interface, ensuring a seamless experience across devices. It includes JWT-based authentication and authorization, securing user-specific data and operations. " +
-				"RESTful APIs were developed to enable smooth communication between the frontend and backend, facilitating efficient CRUD operations for workout listings. ",
-			"image": "/videoware.png",
-			"tech": ["React.js", "Vite.js", "MongoDB", "Mongoose", "Express.js", "JWT Authentication", "Bcrypt"],
-			"link": "https://github.com/Abheelash-Mishra/Workout_Bro"
-		},
+
 		// {
 		// 	"id": "03",
 		// 	"name": "Project C",
@@ -192,9 +190,11 @@ const Projects = () => {
 
 
 								<div className={ `${ isImageVisible ? 'w-1/3' : 'w-full' } flex flex-col xs:px-10 p-6 projectMobile:mx-16 mx-0 text-black` }>
-									<p className="projectMobile:text-6xl xs:text-5xl text-4xl font-bold text-left pt-6 mb-6">/// { project.name }</p>
-									<br />
-									<p className="projectMobile:text-2xl text-lg font-semibold text-justify h-64 ">{ project.details }</p>
+									<div className="flex flex-col justify-center items-center">
+										<p className="w-2/3 projectMobile:text-6xl xs:text-5xl text-4xl font-bold text-left pt-6 mb-6">/// { project.name }</p>
+										<br />
+										<p className="projectMobile:text-2xl w-2/3 text-lg font-semibold text-justify h-52 ">{ project.details }</p>
+									</div>
 
 									<div className="overflow-hidden">
 										<motion.button
