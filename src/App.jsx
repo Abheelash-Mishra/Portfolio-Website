@@ -6,11 +6,14 @@ import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
 import ContactMe from "./components/ContactMe.jsx";
 import Footer from "./components/Footer.jsx";
+import RotatePhoneIndicator from "./components/RotatePhoneIndicator.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
 	return (
 		<div className={ "flex flex-col items-center" }>
-			{/*<Navbar/>*/}
+			<Navbar />
+			<RotatePhoneIndicator />
 			<Hero/>
 			<PortfolioIntro/>
 			<AboutMe/>

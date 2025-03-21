@@ -48,7 +48,7 @@ const Hero = () => {
 
     return (
         <div className="flex justify-center w-full flex-col relative overflow-hidden" id={"hero"}>
-            <Navbar></Navbar>
+            {/*<Navbar></Navbar>*/}
             <div
                 ref={videoContainerRef}
                 className="relative z-0"
