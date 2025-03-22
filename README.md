@@ -1,19 +1,7 @@
 # Welcome To My Portfolio Website
 
-I am Abheelash, a full-stack developer currently in my pre-final year at SRM Institute of Science and Technology. My interest in computer science dates back to my childhood, where I found computers to be captivating. I have always possessed a passion for problem-solving, which ultimately led me to pursue a career in this field.
+Hey everyone! I am Abheelash Mishra, a full-stack developer currently in my final year at SRMIST and am currently interning at Baton Systems as a software engineer. I chose computer science as I found computers fascinating as a kid, and I always did love solving a good problem! I figured I should dabble in web development as designing the backend architecture is some of the most fun I have had in coding!
 
-My journey into web development was driven by my fascination with designing backend architectures, particularly in the realm of DevOps. I find it to be one of the more enjoyable aspects of coding and development.
+As for my tech stack, I utilize React.js for my frontend, alongside with Three.js occasionally, to create visually stunning sites. As for my backend, I use Node.js or Spring frameworks to power my application. Next.js has been been great too! I am also familiar Docker, alongside with cloud infrastructures such as Amazon Web Services, Oracle Cloud Infrastructure, and Google Cloud Platform. I am a strong problem solver and debugger, quickly adaptable to new tech stacks that I have not used before, and am well-versed in my computer fundamentals.
 
-In terms of my technical expertise, I specialize in utilizing React.js for frontend development, occasionally incorporating Three.js to enhance the visual appeal of websites. For backend development, I rely on Node.js or Django to power my applications. I am currently experimenting with Next.js and have found it to be a valuable addition to my skill set.
-
-Furthermore, I am actively exploring technologies such as Docker and Kubernetes, as well as cloud infrastructures like Amazon Web Services, Oracle Cloud Infrastructure, and Google Cloud Platform. I take pride in my ability to adapt quickly to new technologies and possess strong problem-solving and debugging skills. Additionally, I have a solid understanding of computer fundamentals, which enables me to navigate diverse tech stacks effectively.
-
-As for now, I am currently an intern for Samsung R&D Institute in their PRISM program where we are working on developing a CNN model that can take monochrome images and low-light images, and output a high-quality, well-lit image.
-
-\
-Here's a quick preview of my website! 
-
-
-
-https://github.com/Abheelash-Mishra/portfolio-website/assets/108271085/a5725f9a-6d87-4788-bc20-bba0a6405e22
-
+Check out my website from the link in my repo! ;)
