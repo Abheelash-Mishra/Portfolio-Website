@@ -63,7 +63,7 @@ const AboutMe = () => {
 					<br />
 
 					As for my tech stack, I utilize React.js for my frontend, alongside with Three.js occasionally, to create visually stunning sites. As for my
-					backend, I use Node.js or Spring frameworks to power my application. Next.js has been been great too! I am also
+					backend, I use Node.js or Spring frameworks to power my application. Next.js has been great too! I am also
 					familiar Docker, alongside with cloud infrastructures such as Amazon Web Services, Oracle Cloud Infrastructure, and Google
 					Cloud Platform. I am a strong problem solver and debugger, quickly adaptable to new tech stacks that I have not used before, and am
 					well-versed in my computer fundamentals.
